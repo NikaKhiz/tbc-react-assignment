@@ -10,13 +10,13 @@ body {
 *,
 *::after,
 *::before {
-  margin: inherit;
-  padding: inherit;
+  margin: 0;
+  padding: 0;
   box-sizing: inherit;
 }
 
 .container {
-  max-width: 65rem;
+  max-width: 85rem;
   width: 100%;
   margin: 0 auto;
 }

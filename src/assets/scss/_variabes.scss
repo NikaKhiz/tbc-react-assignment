@@ -1,6 +1,13 @@
+// colors
+
+$primaryWhite: rgb(255, 255, 255);
 $primaryBlack: rgb(22, 22, 22);
 $primaryGray: rgb(43, 43, 43);
 $primaryBlue: rgb(0, 174, 239);
 $primaryWhite: rgb(244, 244, 244);
 $darkGray: rgb(26, 31, 30);
 $lightGray: rgb(148, 148, 148);
+
+// transitions
+
+$transitionDefault: all 300ms ease-in-out;
