@@ -1,5 +1,3 @@
-import "./style.scss";
-
 const hamburgerButton = document.querySelector(".hamburger");
 const mobileMenu = document.querySelector(".mobile__menu");
 const mobileNavigation = document.querySelector(".mobile__menu__navigation");
