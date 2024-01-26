@@ -9,6 +9,9 @@ const termsAndConditions = document.querySelector(".terms__and__conditions");
 const termsAndConditionsList = document.querySelector(
   ".terms__and__conditions__content__terms"
 );
+const faqContainer = document.querySelector(".faq__questions");
+const answers = document.querySelectorAll(".faq__questions__item__content");
+const arrows = document.querySelectorAll(".arrow");
 
 // open mobile menu
 hamburgerButton.addEventListener("click", () => {
@@ -28,19 +31,50 @@ document.addEventListener("scroll", () => {
 
 // terms and conditions sidebar functional
 footer.addEventListener("click", (e) => {
+  // check if user clicked terms and conditions button if not take no action
   if (!e.target.closest(".terms__and__conditions__btn")) {
     return;
   }
+
+  // open terms and conditions sidebar
   body.classList.toggle("noscroll");
   termsAndConditions.classList.toggle("is__conditions__open");
 });
 
 termsAndConditions.addEventListener("click", (e) => {
+  // check if user clicked one of close buttons if not take no action
   if (!e.target.closest(".terms__and__conditions__close")) {
     return;
   }
+
+  // close terms and conditions sidebar
   body.classList.toggle("noscroll");
   termsAndConditions.classList.toggle("is__conditions__open");
+});
+
+faqContainer.addEventListener("click", (e) => {
+  // check if user clicked question if take no action
+  const question = e.target.closest(".faq__questions__item__heading");
+  if (!question) {
+    return;
+  }
+
+  const answer = question.nextElementSibling;
+  const arrow = question.querySelector(".arrow");
+  // close opened answers if there is existed ones if not open current one
+  if (!answer.classList.contains("active")) {
+    answers.forEach((item) => {
+      item.classList.remove("active");
+    });
+    arrows.forEach((arrowElement) => {
+      arrowElement.classList.remove("up");
+    });
+    answer.classList.add("active");
+    arrow.classList.add("up");
+  } else {
+    answer.classList.remove("active");
+    arrow.classList.remove("up");
+  }
 });
 
 // populate terms and conditions list according to provided terms array
