@@ -56,6 +56,23 @@ npm run dev
 
 ### Project Structure
 
+```bash
+├─── public
+├─── readme
+├─── src
+│   ├─── assets
+│   │   ├─── images
+│   │   ├─── scss
+│   ├─── scripts
+│    - main.css
+│    - script.js
+- index.html
+- package-lock.json
+- package.json
+- partners.js
+- terms.js
+```
+
 Project is initialized using Vite and its structure is fairly straitforward...
 
 For more information about project standards, take a look at these doc:
