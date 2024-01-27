@@ -51,12 +51,15 @@
           list-style-type: none;
           text-transform: capitalize;
 
-          a,
+          & a,
           a:visited,
           a:active {
             text-decoration: none;
             color: $primaryWhite;
             transition: $transitionDefault;
+            &.active {
+              color: $primaryBlue;
+            }
           }
           a:hover {
             color: $primaryBlue;
@@ -158,6 +161,10 @@
               text-decoration: none;
               color: $primaryWhite;
               transition: $transitionDefault;
+
+              &.active {
+                color: $primaryBlue;
+              }
             }
             a:hover {
               color: $primaryBlue;
